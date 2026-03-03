@@ -1,0 +1,41 @@
+{
+  "name": "imessage-mcp",
+  "version": "1.0.0",
+  "description": "Let AI send and read your iMessages from the terminal. MCP server for Claude Code with smart iMessage/SMS routing and nickname support.",
+  "main": "server.js",
+  "type": "module",
+  "bin": {
+    "imessage-mcp": "./server.js",
+    "imessage-mcp-setup": "./setup.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "setup": "node setup.js"
+  },
+  "keywords": [
+    "mcp",
+    "imessage",
+    "sms",
+    "claude",
+    "claude-code",
+    "macos",
+    "messages",
+    "applescript"
+  ],
+  "author": "tink1005",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tink1005/imessage-mcp.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "better-sqlite3": "^11.8.1"
+  }
+}

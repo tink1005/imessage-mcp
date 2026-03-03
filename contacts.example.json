@@ -1,0 +1,15 @@
+{
+  "contacts": {
+    "Alex": {
+      "phone": "+1234567890",
+      "chat_id": null,
+      "service": "iMessage"
+    },
+    "Jordan": {
+      "phone": "+0987654321",
+      "chat_id": null,
+      "service": "SMS"
+    }
+  },
+  "watch": ["Alex", "Jordan"]
+}
