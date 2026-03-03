@@ -12,7 +12,7 @@ import { join } from "path";
 // --- Config ---
 
 const DB_PATH = join(homedir(), "Library/Messages/chat.db");
-const CONFIG_DIR = join(homedir(), ".config/imessage-mcp");
+const CONFIG_DIR = join(homedir(), ".config/imessage-ai");
 const CONTACTS_FILE = join(CONFIG_DIR, "contacts.json");
 
 // --- Contact Management ---
@@ -183,7 +183,7 @@ end run`;
 // --- MCP Server ---
 
 const server = new McpServer({
-  name: "imessage-mcp",
+  name: "imessage-ai",
   version: "1.0.0",
 });
 

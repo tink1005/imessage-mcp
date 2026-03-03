@@ -1,12 +1,12 @@
 {
-  "name": "imessage-mcp",
+  "name": "imessage-ai",
   "version": "1.0.0",
   "description": "Let AI send and read your iMessages from the terminal. MCP server for Claude Code with smart iMessage/SMS routing and nickname support.",
   "main": "server.js",
   "type": "module",
   "bin": {
-    "imessage-mcp": "./server.js",
-    "imessage-mcp-setup": "./setup.js"
+    "imessage-ai": "./server.js",
+    "imessage-ai-setup": "./setup.js"
   },
   "scripts": {
     "start": "node server.js",

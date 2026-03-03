@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * imessage-mcp setup wizard
+ * imessage-ai setup wizard
  *
  * Interactive setup that:
  * 1. Checks Messages.app access
  * 2. Lists your recent chats
  * 3. Lets you pick contacts and assign nicknames
  * 4. Detects iMessage vs SMS
- * 5. Writes config to ~/.config/imessage-mcp/contacts.json
+ * 5. Writes config to ~/.config/imessage-ai/contacts.json
  */
 
 import Database from "better-sqlite3";
@@ -18,14 +18,14 @@ import { join } from "path";
 import { createInterface } from "readline";
 
 const DB_PATH = join(homedir(), "Library/Messages/chat.db");
-const CONFIG_DIR = join(homedir(), ".config/imessage-mcp");
+const CONFIG_DIR = join(homedir(), ".config/imessage-ai");
 const CONTACTS_FILE = join(CONFIG_DIR, "contacts.json");
 
 const rl = createInterface({ input: process.stdin, output: process.stdout });
 const ask = (q) => new Promise((resolve) => rl.question(q, resolve));
 
 async function main() {
-  console.log("\n  imessage-mcp setup\n");
+  console.log("\n  imessage-ai setup\n");
   console.log("  This wizard will help you configure your contacts.\n");
 
   // Step 1: Check database access
@@ -150,10 +150,10 @@ async function main() {
   console.log(`\n  Config saved to ${CONTACTS_FILE}`);
   console.log(`  ${Object.keys(config.contacts).length} contacts, ${config.watch.length} watched.\n`);
   console.log("  Add to Claude Code:");
-  console.log('  claude mcp add --scope user imessage -- node "/path/to/imessage-mcp/server.js"\n');
+  console.log('  claude mcp add --scope user imessage -- node "/path/to/imessage-ai/server.js"\n');
   console.log("  Or install globally:");
-  console.log("  npm install -g imessage-mcp");
-  console.log("  claude mcp add --scope user imessage -- npx imessage-mcp\n");
+  console.log("  npm install -g imessage-ai");
+  console.log("  claude mcp add --scope user imessage -- npx imessage-ai\n");
 
   rl.close();
 }

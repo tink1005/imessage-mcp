@@ -1,4 +1,4 @@
-# imessage-mcp
+# imessage-ai
 
 ### Let AI send and read your iMessages. From the terminal. On macOS.
 
@@ -36,14 +36,14 @@ Claude: [5:42 PM] Jordan: are we still on for tonight?
 ### 1. Install
 
 ```bash
-npm install -g imessage-mcp
+npm install -g imessage-ai
 ```
 
 Or clone locally:
 
 ```bash
-git clone https://github.com/tink1005/imessage-mcp.git
-cd imessage-mcp
+git clone https://github.com/tink1005/imessage-ai.git
+cd imessage-ai
 npm install
 ```
 
@@ -56,7 +56,7 @@ Your terminal needs access to the Messages database:
 ### 3. Run Setup
 
 ```bash
-npx imessage-mcp-setup
+npx imessage-ai-setup
 ```
 
 Or if cloned locally:
@@ -69,18 +69,18 @@ The wizard will:
 - Verify Messages.app access
 - List your recent conversations
 - Let you pick contacts, assign nicknames, and choose iMessage vs SMS
-- Save config to `~/.config/imessage-mcp/contacts.json`
+- Save config to `~/.config/imessage-ai/contacts.json`
 
 ### 4. Connect to Claude Code
 
 ```bash
-claude mcp add --scope user imessage -- npx imessage-mcp
+claude mcp add --scope user imessage -- npx imessage-ai
 ```
 
 Or with a local install:
 
 ```bash
-claude mcp add --scope user imessage -- node /path/to/imessage-mcp/server.js
+claude mcp add --scope user imessage -- node /path/to/imessage-ai/server.js
 ```
 
 Restart Claude Code. Done. Your AI can now text people for you.
@@ -113,7 +113,7 @@ Restart Claude Code. Done. Your AI can now text people for you.
 
 ```
 ┌─────────────┐     ┌──────────────┐     ┌──────────────────┐
-│  Claude Code │────▸│ imessage-mcp │────▸│   Messages.app   │
+│  Claude Code │────▸│ imessage-ai │────▸│   Messages.app   │
 │  (MCP client)│◂────│ (MCP server) │◂────│ (iMessage / SMS) │
 └─────────────┘     └──────────────┘     └──────────────────┘
                            │
@@ -130,7 +130,7 @@ Restart Claude Code. Done. Your AI can now text people for you.
 
 ## Config
 
-Contacts are stored at `~/.config/imessage-mcp/contacts.json`:
+Contacts are stored at `~/.config/imessage-ai/contacts.json`:
 
 ```json
 {
